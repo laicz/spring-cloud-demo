@@ -8,11 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-int" />
         <module name="spring-cloud-demo" />
+        <module name="spring-cloud-eureka-provider-hello" />
+        <module name="spring-cloud-eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-boot-int" target="1.5" />
+      <module name="eureka" target="1.5" />
+      <module name="spring-boot-int" target="1.8" />
       <module name="spring-cloud-demo" target="1.5" />
+      <module name="spring-cloud-eureka" target="1.8" />
+      <module name="spring-cloud-eureka-provider-hello" target="1.8" />
+      <module name="spring-cloud-eureka-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
