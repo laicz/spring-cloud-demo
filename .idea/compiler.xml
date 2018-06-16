@@ -10,6 +10,7 @@
         <module name="spring-cloud-demo" />
         <module name="spring-cloud-eureka-provider-hello" />
         <module name="spring-cloud-eureka-server" />
+        <module name="spring-cloud-ribbon-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="spring-cloud-eureka" target="1.8" />
       <module name="spring-cloud-eureka-provider-hello" target="1.8" />
       <module name="spring-cloud-eureka-server" target="1.8" />
+      <module name="spring-cloud-ribbon-consumer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

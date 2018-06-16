@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-demo.iml" filepath="$PROJECT_DIR$/spring-cloud-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-eureka-provider-hello/spring-cloud-eureka-provider-hello.iml" filepath="$PROJECT_DIR$/spring-cloud-eureka-provider-hello/spring-cloud-eureka-provider-hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-eureka-server/spring-cloud-eureka-server.iml" filepath="$PROJECT_DIR$/spring-cloud-eureka-server/spring-cloud-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-ribbon-consumer/spring-cloud-ribbon-consumer.iml" filepath="$PROJECT_DIR$/spring-cloud-ribbon-consumer/spring-cloud-ribbon-consumer.iml" />
     </modules>
   </component>
 </project>
