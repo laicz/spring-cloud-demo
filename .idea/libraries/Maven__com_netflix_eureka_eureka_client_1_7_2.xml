@@ -8,6 +8,8 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.2/eureka-client-1.7.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.2/eureka-client-1.7.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.7.2/eureka-client-1.7.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

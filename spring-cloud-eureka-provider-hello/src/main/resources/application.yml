@@ -2,8 +2,11 @@ server:
   port: 7901
 spring:
   application:
-    name: hello-service
+    name: hello-service  #指定微服务名称，建议使用小写
 eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.1.4:8761/eureka/,http://192.168.1.4:8762/eureka/
+  instance:
+    prefer-ip-address: true      #使用IP进行访问,默认是使用用户名
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
