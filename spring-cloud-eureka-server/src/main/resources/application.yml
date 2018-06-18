@@ -6,11 +6,13 @@ server:
 eureka:
   instance:
     hostname: localhost
+    prefer-ip-address: true      #使用IP进行访问,默认是使用用户名
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
   server:
-    enable-self-preservation: false  #eureka 自我保护配置，默认开启（true），开发过程中进行关闭
+    enable-self-preservation: false  #eureka 自我保护配置，默认开启（true），开发过程中关闭
 
