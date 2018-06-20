@@ -10,6 +10,9 @@
 
     <modules>
         <module>spring-boot-int</module>
+        <module>spring-cloud-eureka-provider-hello</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-ribbon-consumer</module>
     </modules>
 
 

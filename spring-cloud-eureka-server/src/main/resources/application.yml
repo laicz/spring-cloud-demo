@@ -13,6 +13,8 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    healthcheck:
+      enabled: true #开启健康检查
   server:
     enable-self-preservation: false  #eureka 自我保护配置，默认开启（true），开发过程中关闭
 
