@@ -19,6 +19,10 @@ public class ConsumerHystrixService {
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * 使用@HystrixCommand注释的方法会使用熔断器
+     * @return
+     */
     @HystrixCommand(fallbackMethod = "helloFail")
     public String hystrix() {
         return restTemplate.getForEntity("http://HELLO-SERVICE/index",String.class).getBody();

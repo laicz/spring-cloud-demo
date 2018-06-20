@@ -13,6 +13,7 @@
         <module>spring-cloud-eureka-provider-hello</module>
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-ribbon-consumer</module>
+        <module>spring-cloud-feign</module>
     </modules>
 
 

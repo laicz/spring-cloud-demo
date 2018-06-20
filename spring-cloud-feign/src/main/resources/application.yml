@@ -1,0 +1,12 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: feign-consumer
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+  client:
+    serviceUrl:
+          defaultZone: http://192.168.1.4:8761/eureka/,http://192.168.1.4:8762/eureka/
