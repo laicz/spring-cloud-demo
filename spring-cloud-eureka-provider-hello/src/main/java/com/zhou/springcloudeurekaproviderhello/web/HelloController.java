@@ -13,6 +13,8 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Random;
+
 /**
  * 2018/6/16  15:36
  * created by zhoumb
@@ -54,5 +56,14 @@ public class HelloController {
     @RequestMapping(value = "/hello3")
     public String hello(@RequestBody User user){
         return JSON.toJSONString(user);
+    }
+
+    @RequestMapping(value = "delay")
+    public String delay() throws InterruptedException {
+        int sleepTime = new Random().nextInt(3000);
+        Thread.sleep(sleepTime);
+
+        System.out.println(">>>>>>>>>>>>>>>>delay"+sleepTime+"<<<<<<<<<<<");
+        return "delay ok";
     }
 }

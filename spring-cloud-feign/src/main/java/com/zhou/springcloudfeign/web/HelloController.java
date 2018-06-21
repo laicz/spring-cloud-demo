@@ -35,4 +35,9 @@ public class HelloController {
         stringBuilder.append(helloService.hello(new User("DIDI", 30))).append("\n");
         return stringBuilder.toString();
     }
+
+    @RequestMapping(value = "/feign-delay")
+    public String feignDelay(){
+        return helloService.delay();
+    }
 }

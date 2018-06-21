@@ -26,4 +26,7 @@ public interface HelloService {
 
     @GetMapping(value = "/hello3")
     String hello(@RequestBody User user);
+
+    @RequestMapping(value = "/delay",method = RequestMethod.GET)
+    String delay();
 }
