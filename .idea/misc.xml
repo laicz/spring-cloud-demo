@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/spring-cloud-eureka-provider-hello/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-ribbon-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-common/pom.xml" />
       </list>
     </option>
   </component>

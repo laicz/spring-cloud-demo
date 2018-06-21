@@ -14,6 +14,7 @@
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-ribbon-consumer</module>
         <module>spring-cloud-feign</module>
+        <module>cloud-common</module>
     </modules>
 
 
