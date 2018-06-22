@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
         <module name="cloud-common" />
         <module name="spring-boot-int" />
         <module name="spring-cloud-demo" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
       <module name="cloud-common" target="1.5" />
       <module name="eureka" target="1.5" />
       <module name="spring-boot-int" target="1.8" />
