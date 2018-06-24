@@ -12,7 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Random;
 
 /**
@@ -65,5 +70,14 @@ public class HelloController {
 
         System.out.println(">>>>>>>>>>>>>>>>delay"+sleepTime+"<<<<<<<<<<<");
         return "delay ok";
+    }
+
+    @RequestMapping(value = "/test")
+    public String test(){
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        RequestAttributes requestAttributes1 = RequestContextHolder.currentRequestAttributes();
+        HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
+        HttpServletResponse response = ((ServletRequestAttributes) requestAttributes).getResponse();
+        return "test";
     }
 }
