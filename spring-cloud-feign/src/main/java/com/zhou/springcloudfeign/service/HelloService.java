@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
  * 2018/6/20  23:11
  * created by zhoumb
  */
-@FeignClient("hello-service")
+@FeignClient("hello-service")  //you will use server name
 public interface HelloService {
 
-    @RequestMapping("/index")
+    @RequestMapping("/index") //no param
     String hello();
 
-    @GetMapping(value = "hello1")
+    @GetMapping(value = "hello1") //hava one param
     String hello(@RequestParam(value = "name") String name);
 
     @GetMapping(value = "hello2")

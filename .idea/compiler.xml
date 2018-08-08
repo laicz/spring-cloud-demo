@@ -9,11 +9,13 @@
         <module name="api-gateway" />
         <module name="cloud-common" />
         <module name="config-server" />
+        <module name="licensing-service" />
         <module name="spring-boot-int" />
         <module name="spring-cloud-demo" />
         <module name="spring-cloud-eureka-provider-hello" />
         <module name="spring-cloud-eureka-server" />
         <module name="spring-cloud-feign" />
+        <module name="spring-cloud-in-action" />
         <module name="spring-cloud-ribbon-consumer" />
       </profile>
     </annotationProcessing>
@@ -22,13 +24,63 @@
       <module name="cloud-common" target="1.5" />
       <module name="config-server" target="1.8" />
       <module name="eureka" target="1.5" />
+      <module name="licensing-service" target="1.8" />
+      <module name="spring-aop_main" target="1.8" />
+      <module name="spring-aop_test" target="1.8" />
+      <module name="spring-aspects_main" target="1.8" />
+      <module name="spring-aspects_test" target="1.8" />
+      <module name="spring-beans_main" target="1.8" />
+      <module name="spring-beans_test" target="1.8" />
       <module name="spring-boot-int" target="1.8" />
+      <module name="spring-build-src_main" target="1.8" />
+      <module name="spring-build-src_test" target="1.8" />
       <module name="spring-cloud-demo" target="1.5" />
       <module name="spring-cloud-eureka" target="1.8" />
       <module name="spring-cloud-eureka-provider-hello" target="1.8" />
       <module name="spring-cloud-eureka-server" target="1.8" />
       <module name="spring-cloud-feign" target="1.8" />
+      <module name="spring-cloud-in-action" target="1.6" />
       <module name="spring-cloud-ribbon-consumer" target="1.8" />
+      <module name="spring-context-indexer_main" target="1.8" />
+      <module name="spring-context-indexer_test" target="1.8" />
+      <module name="spring-context-support_main" target="1.8" />
+      <module name="spring-context-support_test" target="1.8" />
+      <module name="spring-context_main" target="1.8" />
+      <module name="spring-context_test" target="1.8" />
+      <module name="spring-core_main" target="1.8" />
+      <module name="spring-core_test" target="1.8" />
+      <module name="spring-expression_main" target="1.8" />
+      <module name="spring-expression_test" target="1.8" />
+      <module name="spring-framework-bom_main" target="1.8" />
+      <module name="spring-framework-bom_test" target="1.8" />
+      <module name="spring-instrument_main" target="1.8" />
+      <module name="spring-instrument_test" target="1.8" />
+      <module name="spring-jcl_main" target="1.8" />
+      <module name="spring-jcl_test" target="1.8" />
+      <module name="spring-jdbc_main" target="1.8" />
+      <module name="spring-jdbc_test" target="1.8" />
+      <module name="spring-jms_main" target="1.8" />
+      <module name="spring-jms_test" target="1.8" />
+      <module name="spring-messaging_main" target="1.8" />
+      <module name="spring-messaging_test" target="1.8" />
+      <module name="spring-orm_main" target="1.8" />
+      <module name="spring-orm_test" target="1.8" />
+      <module name="spring-oxm_main" target="1.8" />
+      <module name="spring-oxm_test" target="1.8" />
+      <module name="spring-test_main" target="1.8" />
+      <module name="spring-test_test" target="1.8" />
+      <module name="spring-tx_main" target="1.8" />
+      <module name="spring-tx_test" target="1.8" />
+      <module name="spring-web_main" target="1.8" />
+      <module name="spring-web_test" target="1.8" />
+      <module name="spring-webflux_main" target="1.8" />
+      <module name="spring-webflux_test" target="1.8" />
+      <module name="spring-webmvc_main" target="1.8" />
+      <module name="spring-webmvc_test" target="1.8" />
+      <module name="spring-websocket_main" target="1.8" />
+      <module name="spring-websocket_test" target="1.8" />
+      <module name="spring_main" target="1.8" />
+      <module name="spring_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

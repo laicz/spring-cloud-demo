@@ -25,6 +25,7 @@ public class ConsumerHystrixService {
      */
     @HystrixCommand(fallbackMethod = "helloFail")
     public String hystrix() {
+//        restTemplate.exchange()
         return restTemplate.getForEntity("http://HELLO-SERVICE/index",String.class).getBody();
     }
 
