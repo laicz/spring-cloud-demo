@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/../springcloudinaction/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data/pom.xml" />
+        <option value="$PROJECT_DIR$/growthnetwork/pom.xml" />
       </list>
     </option>
   </component>
