@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-common/cloud-common.iml" filepath="$PROJECT_DIR$/cloud-common/cloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/growthnetwork/growth-network.iml" filepath="$PROJECT_DIR$/growthnetwork/growth-network.iml" group="spring" />
+      <module fileurl="file://$PROJECT_DIR$/growth-serializable/growth-serializable.iml" filepath="$PROJECT_DIR$/growth-serializable/growth-serializable.iml" group="spring" />
       <module fileurl="file://$PROJECT_DIR$/../springcloudinaction/licensing-service/licensing-service.iml" filepath="$PROJECT_DIR$/../springcloudinaction/licensing-service/licensing-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring.iml" filepath="$PROJECT_DIR$/.idea/modules/spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-aop/spring-aop.iml" group="spring-aop" />
