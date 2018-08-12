@@ -16,7 +16,7 @@ public class SerializableDemo {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-//        serializable();
+        serializable();
         deSerializable();
     }
 

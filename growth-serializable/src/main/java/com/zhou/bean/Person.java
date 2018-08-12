@@ -19,6 +19,8 @@ public class Person implements Serializable {
 
     private String address;
 
+    private Integer height;
+
     public String getAddress() {
         return address;
     }
@@ -43,10 +45,21 @@ public class Person implements Serializable {
 //        this.age = age;
 //    }
 
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", height=" + height +
                 '}';
     }
 }
