@@ -6,6 +6,7 @@
 
     <groupId>com.zhou</groupId>
     <artifactId>spring-cloud-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
@@ -15,6 +16,7 @@
         <module>spring-cloud-ribbon-consumer</module>
         <module>spring-cloud-feign</module>
         <module>cloud-common</module>
+        <module>spring-zookeeper</module>
     </modules>
 
 

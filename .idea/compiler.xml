@@ -13,13 +13,13 @@
         <module name="growth-serializable" />
         <module name="licensing-service" />
         <module name="spring-boot-int" />
-        <module name="spring-cloud-demo" />
         <module name="spring-cloud-eureka-provider-hello" />
         <module name="spring-cloud-eureka-server" />
         <module name="spring-cloud-feign" />
         <module name="spring-cloud-in-action" />
         <module name="spring-cloud-ribbon-consumer" />
         <module name="spring-data" />
+        <module name="spring-zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -85,6 +85,7 @@
       <module name="spring-webmvc_test" target="1.8" />
       <module name="spring-websocket_main" target="1.8" />
       <module name="spring-websocket_test" target="1.8" />
+      <module name="spring-zookeeper" target="1.7" />
       <module name="spring_main" target="1.8" />
       <module name="spring_test" target="1.8" />
     </bytecodeTargetLevel>

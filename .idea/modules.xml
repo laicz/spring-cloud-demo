@@ -86,6 +86,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-websocket/spring-websocket.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-websocket/spring-websocket.iml" group="spring-websocket" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-websocket/spring-websocket_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-websocket/spring-websocket_main.iml" group="spring-websocket" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-websocket/spring-websocket_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-websocket/spring-websocket_test.iml" group="spring-websocket" />
+      <module fileurl="file://$PROJECT_DIR$/spring-zookeeper/spring-zookeeper.iml" filepath="$PROJECT_DIR$/spring-zookeeper/spring-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring_main.iml" group="spring" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring_test.iml" group="spring" />
     </modules>
