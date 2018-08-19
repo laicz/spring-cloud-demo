@@ -56,6 +56,9 @@ public class SerializableDemo {
         Person dePerson3 = (Person) objectInputStream.readObject();
         System.out.println("第一序列化：" + dePerson3);
 
+        System.out.println(dePerson1 == dePerson2);
+        System.out.println(dePerson1 == dePerson3);
+
         /**
          * 如果多次序列化  将会导致异常EOFException
          */
