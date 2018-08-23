@@ -29,7 +29,8 @@ public class CuratorSessionDemo {
                 .sessionTimeoutMs(5000)
                 .connectionTimeoutMs(5000)
                 .retryPolicy(new ExponentialBackoffRetry(1000, 3));
-        CuratorFramework build = builder.build();
+        CuratorFramework build = builder.namespace("/curator")//指定命名空间
+                .build();
         build.start();
     }
 }
