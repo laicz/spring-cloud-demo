@@ -22,6 +22,14 @@ public class Artwork {
     private Integer year;
     private BigDecimal price;
 
+    public Artwork(String id, String title, String artist, Integer year, BigDecimal price) {
+        this.id = id;
+        this.title = title;
+        this.artist = artist;
+        this.year = year;
+        this.price = price;
+    }
+
     public String getId() {
         return id;
     }

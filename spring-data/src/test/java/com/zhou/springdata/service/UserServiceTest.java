@@ -5,7 +5,9 @@
 package com.zhou.springdata.service;
 
 import com.alibaba.fastjson.JSON;
+import com.zhou.springdata.model.Artwork;
 import com.zhou.springdata.model.User;
+import com.zhou.springdata.repository.ArtworkRepository;
 import com.zhou.springdata.repository.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
@@ -30,9 +33,11 @@ public class UserServiceTest {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private ArtworkRepository artworkRepository;
 
-    private static final ExecutorService executorService = Executors.newFixedThreadPool(5000);
-    private static CountDownLatch countDownLatch = new CountDownLatch(5000);
+    private static final ExecutorService executorService = Executors.newFixedThreadPool(500);
+    private static CountDownLatch countDownLatch = new CountDownLatch(500);
 
     @Test
     public void insertUserTest() throws InterruptedException {
@@ -60,6 +65,22 @@ public class UserServiceTest {
         for (User user : users) {
             System.out.println(JSON.toJSONString(user));
         }
+    }
+
+    @Test
+    public void insertArtwork() throws InterruptedException {
+        for (int i = 0; i < 500; i++) {
+            int finalI = i;
+            executorService.execute(() -> {
+                for (int j = 0; j < 1000; j++) {
+                    String s = String.valueOf(finalI * 1000 + j);
+                    artworkRepository.save(new Artwork(s,"title:" + s,"artist:" + s,j,new BigDecimal(finalI*j)));
+                }
+                countDownLatch.countDown();
+            });
+        }
+        countDownLatch.await();
+        System.out.println("程序结束");
     }
 
 }

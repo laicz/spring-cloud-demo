@@ -20,6 +20,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * 2018/9/22  17:03
@@ -33,7 +34,7 @@ public class MongoAggregateTest {
 
     @Test
     public void printResult() {
-        List<Map> maps = bucket();
+        List<Map> maps = bucketAuto();
         if (CollectionUtils.isEmpty(maps)) {
             System.out.println("没有结果");
             return;
@@ -43,6 +44,11 @@ public class MongoAggregateTest {
         }
     }
 
+    /**
+     * addFields   暂时没有找到用法  可以使用这种方法来代替原来的用法
+     *
+     * @return
+     */
     public List<Map> addFields() {
         Aggregation aggregation = Aggregation.newAggregation(
                 Aggregation.project("id", "student", "homework").andExpression("{ $addFields:{ totalHomework: { $sum: '$homework'}}}"),
@@ -52,13 +58,37 @@ public class MongoAggregateTest {
         return aggregate(aggregation, Score.class);
     }
 
+    /**
+     * bucket 水桶 ，可以将数字类型的数据来设定范围，进行聚合统计
+     *
+     * @return
+     */
     public List<Map> bucket() {
         Aggregation aggregation = Aggregation.newAggregation(
                 Aggregation.bucket("price")
                         .withBoundaries(0, 200, 400)
                         .withDefaultBucket("other")  //如果存在没有在上面的数据中包含范围的时间，一定设置other  否则会报错
                         .andOutput("id").count().as("count")
-                        .andOutput("title").push().as("titles")
+//                        .andOutput("title").push().as("titles")
+        );
+        return aggregate(aggregation, Artwork.class);
+    }
+
+    /**
+     * 给特定的列来指定分区的个数，让他自己来进行分区并返回分区的大小范围及设定的
+     *
+     * @return
+     */
+    public List<Map> bucketAuto() {
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.bucketAuto("price", 500)
+        );
+        return aggregate(aggregation, Artwork.class);
+    }
+
+    public List<Map> bucketAuto(int partion) {
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.bucketAuto("price", partion)
         );
         return aggregate(aggregation, Artwork.class);
     }
@@ -69,5 +99,22 @@ public class MongoAggregateTest {
             return aggregate.getMappedResults();
         }
         return null;
+    }
+
+    @Test
+    public void yali() throws InterruptedException {
+        CountDownLatch countDownLatch = new CountDownLatch(100);
+        for (int i = 0; i < 100; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    for (int i = 0; i < 10000; i++) {
+                        bucketAuto(i);
+                    }
+                    countDownLatch.countDown();
+                }
+            }).start();
+        }
+        countDownLatch.await();
     }
 }
