@@ -11,6 +11,7 @@
         <module name="config-server" />
         <module name="growth-network" />
         <module name="growth-serializable" />
+        <module name="guava-programming" />
         <module name="licensing-service" />
         <module name="spring-boot-int" />
         <module name="spring-cloud-eureka-provider-hello" />
@@ -29,6 +30,7 @@
       <module name="eureka" target="1.5" />
       <module name="growth-network" target="1.7" />
       <module name="growth-serializable" target="1.8" />
+      <module name="guava-programming" target="1.7" />
       <module name="licensing-service" target="1.8" />
       <module name="spring-aop_main" target="1.8" />
       <module name="spring-aop_test" target="1.8" />
@@ -85,7 +87,7 @@
       <module name="spring-webmvc_test" target="1.8" />
       <module name="spring-websocket_main" target="1.8" />
       <module name="spring-websocket_test" target="1.8" />
-      <module name="spring-zookeeper" target="1.7" />
+      <module name="spring-zookeeper" target="8" />
       <module name="spring_main" target="1.8" />
       <module name="spring_test" target="1.8" />
     </bytecodeTargetLevel>

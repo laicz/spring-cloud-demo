@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/spring-data/pom.xml" />
         <option value="$PROJECT_DIR$/growthnetwork/pom.xml" />
         <option value="$PROJECT_DIR$/growth-serializable/pom.xml" />
+        <option value="$PROJECT_DIR$/guavaprogramming/pom.xml" />
       </list>
     </option>
   </component>

@@ -7,3 +7,8 @@ redis:
     max-idle: 8
     min-idle: 0
   timeout: 0
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://60.205.176.135:27017/zhou
