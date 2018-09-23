@@ -6,11 +6,16 @@ package com.zhou.springdata.mongo;
 
 import com.zhou.springdata.model.Artwork;
 import com.zhou.springdata.model.Score;
+import com.zhou.springdata.model.Venue;
+import com.zhou.springdata.repository.VenueRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.geo.Distance;
+import org.springframework.data.geo.Metrics;
+import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 
@@ -19,11 +24,13 @@ import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.aggregation.FacetOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.NearQuery;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -35,10 +42,12 @@ import java.util.concurrent.CountDownLatch;
 public class MongoAggregateTest {
     @Autowired
     private MongoTemplate mongoTemplate;
+    @Autowired
+    private VenueRepository venueRepository;
 
     @Test
     public void printResult() {
-        List<Map> maps = _facet();
+        List<Map> maps = geoNear();
         if (CollectionUtils.isEmpty(maps)) {
             System.out.println("没有结果");
             return;
@@ -197,6 +206,15 @@ public class MongoAggregateTest {
         return aggregate(aggregation, Artwork.class);
     }
 
+    public List<Map> geoNear() {
+        Point location = new Point(0.77, 0.33);
+        NearQuery nearQuery = NearQuery.near(location).maxDistance(new Distance(100000, Metrics.MILES));
+        Aggregation aggregation = newAggregation(
+                Aggregation.geoNear(nearQuery, "location")
+        );
+        return aggregate(aggregation, Venue.class);
+    }
+
     private List<Map> aggregate(Aggregation aggregation, Class clazz) {
         AggregationResults<Map> aggregate = mongoTemplate.aggregate(aggregation, clazz, Map.class);
         if (aggregate != null) {
@@ -220,5 +238,14 @@ public class MongoAggregateTest {
             }).start();
         }
         countDownLatch.await();
+    }
+
+    @Test
+    public void insertVenue() {
+        for (int i = 0; i < 10000; i++) {
+            Venue venue = new Venue();
+            venue.setLocation(new double[]{new Random().nextDouble(), new Random().nextDouble()});
+            venueRepository.save(venue);
+        }
     }
 }
