@@ -4,10 +4,7 @@
  */
 package com.zhou.springdata.mongo;
 
-import com.zhou.springdata.model.Artwork;
-import com.zhou.springdata.model.Employees;
-import com.zhou.springdata.model.Score;
-import com.zhou.springdata.model.Venue;
+import com.zhou.springdata.model.*;
 import com.zhou.springdata.repository.VenueRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,6 +20,7 @@ import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.ConditionalOperators;
 import org.springframework.data.mongodb.core.aggregation.FacetOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.NearQuery;
@@ -48,7 +46,7 @@ public class MongoAggregateTest {
 
     @Test
     public void printResult() {
-        List<Map> maps = graphLookup();
+        List<Map> maps = reDocument_cond();
         if (CollectionUtils.isEmpty(maps)) {
             System.out.println("没有结果");
             return;
@@ -238,6 +236,28 @@ public class MongoAggregateTest {
                         .as("reportingHierarchy")
         );
         return aggregate(aggregation, Employees.class);
+    }
+
+    /**
+     * 重塑文档 if-else
+     *
+     * @return
+     */
+    public List<Map> reDocument_cond() {
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.project("item")
+                        .and("discount") .applyCondition(ConditionalOperators.Cond.newBuilder().when(Criteria.where("qty").gte(250)).then(30).otherwise(20))
+                        .and(ConditionalOperators.ifNull("description").then("Unspecified")).as("description")
+        );
+        return aggregate(aggregation, Inventory.class);
+    }
+
+    public List<Map> stringEq() {
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.project("id", "sex", "attribute").and("sex").eq("$attribute").as("difference"),
+                Aggregation.limit(100)
+        );
+        return aggregate(aggregation, User.class);
     }
 
     @Test
