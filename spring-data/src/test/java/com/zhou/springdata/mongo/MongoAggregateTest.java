@@ -5,6 +5,7 @@
 package com.zhou.springdata.mongo;
 
 import com.zhou.springdata.model.Artwork;
+import com.zhou.springdata.model.Employees;
 import com.zhou.springdata.model.Score;
 import com.zhou.springdata.model.Venue;
 import com.zhou.springdata.repository.VenueRepository;
@@ -47,7 +48,7 @@ public class MongoAggregateTest {
 
     @Test
     public void printResult() {
-        List<Map> maps = geoNear();
+        List<Map> maps = graphLookup();
         if (CollectionUtils.isEmpty(maps)) {
             System.out.println("没有结果");
             return;
@@ -221,6 +222,22 @@ public class MongoAggregateTest {
             return aggregate.getMappedResults();
         }
         return null;
+    }
+
+    /**
+     * 相当于实现树形关系  找到自己要负责的东西
+     *
+     * @return
+     */
+    public List<Map> graphLookup() {
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.graphLookup("employees")
+                        .startWith("reportsTo")
+                        .connectFrom("reportsTo")
+                        .connectTo("name")
+                        .as("reportingHierarchy")
+        );
+        return aggregate(aggregation, Employees.class);
     }
 
     @Test
