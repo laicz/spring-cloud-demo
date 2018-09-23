@@ -21,6 +21,7 @@ public class Artwork {
     private String artist;
     private Integer year;
     private BigDecimal price;
+    private String[] tags;
 
     public Artwork(String id, String title, String artist, Integer year, BigDecimal price) {
         this.id = id;
@@ -28,6 +29,23 @@ public class Artwork {
         this.artist = artist;
         this.year = year;
         this.price = price;
+    }
+
+    public Artwork(String id, String title, String artist, Integer year, BigDecimal price, String[] tags) {
+        this.id = id;
+        this.title = title;
+        this.artist = artist;
+        this.year = year;
+        this.price = price;
+        this.tags = tags;
+    }
+
+    public String[] getTags() {
+        return tags;
+    }
+
+    public void setTags(String[] tags) {
+        this.tags = tags;
     }
 
     public String getId() {
