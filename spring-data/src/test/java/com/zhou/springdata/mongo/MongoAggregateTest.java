@@ -73,6 +73,7 @@ public class MongoAggregateTest {
     /**
      * bucket 水桶 ，可以将数字类型的数据来设定范围，进行聚合统计
      *
+     *
      * @return
      */
     public List<Map> bucket() {
