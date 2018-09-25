@@ -15,13 +15,10 @@ import org.springframework.data.geo.Distance;
 import org.springframework.data.geo.Metrics;
 import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.*;
 
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
-import org.springframework.data.mongodb.core.aggregation.AggregationResults;
-import org.springframework.data.mongodb.core.aggregation.ConditionalOperators;
-import org.springframework.data.mongodb.core.aggregation.FacetOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.NearQuery;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -72,7 +69,6 @@ public class MongoAggregateTest {
 
     /**
      * bucket 水桶 ，可以将数字类型的数据来设定范围，进行聚合统计
-     *
      *
      * @return
      */
@@ -224,6 +220,17 @@ public class MongoAggregateTest {
     }
 
     /**
+     * 允许使用allowDiskUse
+     *
+     * @return
+     */
+    public List<Map> allowDiskUse() {
+        Aggregation aggregation = Aggregation.newAggregation();
+        aggregation.withOptions(AggregationOptions.builder().allowDiskUse(true).build());
+        return aggregate(aggregation, Artwork.class);
+    }
+
+    /**
      * 相当于实现树形关系  找到自己要负责的东西
      *
      * @return
@@ -247,7 +254,7 @@ public class MongoAggregateTest {
     public List<Map> reDocument_cond() {
         Aggregation aggregation = Aggregation.newAggregation(
                 Aggregation.project("item")
-                        .and("discount") .applyCondition(ConditionalOperators.Cond.newBuilder().when(Criteria.where("qty").gte(250)).then(30).otherwise(20))
+                        .and("discount").applyCondition(ConditionalOperators.Cond.newBuilder().when(Criteria.where("qty").gte(250)).then(30).otherwise(20))
                         .and(ConditionalOperators.ifNull("description").then("Unspecified")).as("description")
         );
         return aggregate(aggregation, Inventory.class);
