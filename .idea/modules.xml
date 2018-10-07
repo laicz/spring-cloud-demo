@@ -6,9 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-common/cloud-common.iml" filepath="$PROJECT_DIR$/cloud-common/cloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/growthnetwork/growth-network.iml" filepath="$PROJECT_DIR$/growthnetwork/growth-network.iml" group="spring" />
+      <module fileurl="file://$PROJECT_DIR$/growth-network/growth-network.iml" filepath="$PROJECT_DIR$/growth-network/growth-network.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/growth-serializable/growth-serializable.iml" filepath="$PROJECT_DIR$/growth-serializable/growth-serializable.iml" group="spring" />
-      <module fileurl="file://$PROJECT_DIR$/guavaprogramming/guava-programming.iml" filepath="$PROJECT_DIR$/guavaprogramming/guava-programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guava-programming/guava-programming.iml" filepath="$PROJECT_DIR$/guava-programming/guava-programming.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/../springcloudinaction/licensing-service/licensing-service.iml" filepath="$PROJECT_DIR$/../springcloudinaction/licensing-service/licensing-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring.iml" filepath="$PROJECT_DIR$/.idea/modules/spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-aop/spring-aop.iml" group="spring-aop" />
@@ -29,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-eureka-server/spring-cloud-eureka-server.iml" filepath="$PROJECT_DIR$/spring-cloud-eureka-server/spring-cloud-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign.iml" filepath="$PROJECT_DIR$/spring-cloud-feign/spring-cloud-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/../springcloudinaction/spring-cloud-in-action.iml" filepath="$PROJECT_DIR$/../springcloudinaction/spring-cloud-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-jms/spring-cloud-jms.iml" filepath="$PROJECT_DIR$/spring-cloud-jms/spring-cloud-jms.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-ribbon-consumer/spring-cloud-ribbon-consumer.iml" filepath="$PROJECT_DIR$/spring-cloud-ribbon-consumer/spring-cloud-ribbon-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-context/spring-context.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-context/spring-context.iml" group="spring-context" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-context-indexer/spring-context-indexer.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-context-indexer/spring-context-indexer.iml" group="spring-context-indexer" />

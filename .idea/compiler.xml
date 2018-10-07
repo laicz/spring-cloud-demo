@@ -18,6 +18,7 @@
         <module name="spring-cloud-eureka-server" />
         <module name="spring-cloud-feign" />
         <module name="spring-cloud-in-action" />
+        <module name="spring-cloud-jms" />
         <module name="spring-cloud-ribbon-consumer" />
         <module name="spring-data" />
         <module name="spring-zookeeper" />
@@ -47,6 +48,7 @@
       <module name="spring-cloud-eureka-server" target="1.8" />
       <module name="spring-cloud-feign" target="1.8" />
       <module name="spring-cloud-in-action" target="1.6" />
+      <module name="spring-cloud-jms" target="1.8" />
       <module name="spring-cloud-ribbon-consumer" target="1.8" />
       <module name="spring-context-indexer_main" target="1.8" />
       <module name="spring-context-indexer_test" target="1.8" />
