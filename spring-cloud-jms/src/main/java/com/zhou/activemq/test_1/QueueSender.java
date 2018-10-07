@@ -7,6 +7,7 @@ package com.zhou.activemq.test_1;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
+import java.util.Enumeration;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -28,9 +29,15 @@ public class QueueSender {
         for (int i = 0; i < 3; i++) {
             //创建需要发送的消息
             TextMessage textMessage = session.createTextMessage("message--" + i);
+//            QueueBrowser browser = session.createBrowser((Queue) destination);
+//            textMessage.setStringProperty("","");
 //            TimeUnit.SECONDS.sleep(1);
             //通过消息发送者发送消息
             producer.send(textMessage);
+        }
+        Enumeration jmsxPropertyNames = connection.getMetaData().getJMSXPropertyNames();
+        while (jmsxPropertyNames.hasMoreElements()){
+            System.out.println(jmsxPropertyNames.nextElement());
         }
 
         session.commit();

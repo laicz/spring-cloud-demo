@@ -23,6 +23,7 @@ public class QueueReciver {
 
         MessageConsumer consumer = session.createConsumer(destination);
         for (int i = 0; i < 3; i++) {
+            //receive是同步消息消息的  没有消息的话会一直阻塞
             TextMessage receive = (TextMessage) consumer.receive();
             session.commit();
             System.out.println("接受到的结果：" + receive.getText());
