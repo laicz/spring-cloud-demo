@@ -18,14 +18,20 @@ public class QueueReciver {
         Connection connection = connectionFactory.createConnection();
         connection.start();
 
-        Session session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE);
+        Session session = connection.createSession(Boolean.FALSE, Session.CLIENT_ACKNOWLEDGE);
         Destination destination = session.createQueue("my-queue");
 
         MessageConsumer consumer = session.createConsumer(destination);
         for (int i = 0; i < 3; i++) {
             //receive是同步消息消息的  没有消息的话会一直阻塞
             TextMessage receive = (TextMessage) consumer.receive();
-            session.commit();
+
+//            Destination jmsReplyTo = receive.getJMSReplyTo();
+
+//            session.commit();
+//            if (i == 1){
+            receive.acknowledge();
+//            }
             System.out.println("接受到的结果：" + receive.getText());
         }
         session.close();

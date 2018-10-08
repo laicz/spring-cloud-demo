@@ -8,7 +8,6 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 import java.util.Enumeration;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 2018/10/7  10:37
@@ -22,13 +21,18 @@ public class QueueSender {
         connection.start();
 
         //true：是否使用事务
-        Session session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE);
+        Session session = connection.createSession(Boolean.FALSE, Session.CLIENT_ACKNOWLEDGE);
         Destination destination = session.createQueue("my-queue");
+
+        //创建临时队列
+//        TemporaryQueue temporaryQueue = session.createTemporaryQueue();
 
         MessageProducer producer = session.createProducer(destination);
         for (int i = 0; i < 3; i++) {
             //创建需要发送的消息
             TextMessage textMessage = session.createTextMessage("message--" + i);
+            //将消息写入临时队列中
+//            textMessage.setJMSReplyTo(temporaryQueue);
 //            QueueBrowser browser = session.createBrowser((Queue) destination);
 //            textMessage.setStringProperty("","");
 //            TimeUnit.SECONDS.sleep(1);
@@ -36,11 +40,12 @@ public class QueueSender {
             producer.send(textMessage);
         }
         Enumeration jmsxPropertyNames = connection.getMetaData().getJMSXPropertyNames();
-        while (jmsxPropertyNames.hasMoreElements()){
+        while (jmsxPropertyNames.hasMoreElements()) {
             System.out.println(jmsxPropertyNames.nextElement());
         }
 
-        session.commit();
+        //使用事务时才能使用
+//        session.commit();
         session.close();
         connection.close();
     }
