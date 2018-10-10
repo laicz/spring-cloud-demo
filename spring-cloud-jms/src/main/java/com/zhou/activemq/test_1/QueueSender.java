@@ -26,7 +26,7 @@ public class QueueSender {
 
         //创建临时队列
 //        TemporaryQueue temporaryQueue = session.createTemporaryQueue();
-
+        String str = null;
         MessageProducer producer = session.createProducer(destination);
         for (int i = 0; i < 3; i++) {
             //创建需要发送的消息
