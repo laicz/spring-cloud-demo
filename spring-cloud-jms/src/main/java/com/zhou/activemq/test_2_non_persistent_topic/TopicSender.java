@@ -2,7 +2,7 @@
  * Date:     2018/10/1022:28
  * AUTHOR:   Administrator
  */
-package com.zhou.activemq.test_3.test_2;
+package com.zhou.activemq.test_2_non_persistent_topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
@@ -13,17 +13,16 @@ import javax.jms.*;
  * 2018/10/10  22:28
  * created by zhoumb
  */
-public class TopicPersistentSender {
+public class TopicSender {
     public static void main(String[] args) throws Exception {
         //连接工厂
         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://60.205.176.135:61616");
         Connection connection = connectionFactory.createConnection();
+        connection.start();
 
         Session session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
-        Topic topic = session.createTopic("my-topic-persistent");
+        Topic topic = session.createTopic("my-topic");
         MessageProducer producer = session.createProducer(topic);
-        producer.setDeliveryMode(DeliveryMode.PERSISTENT);
-        connection.start();
         for (int i = 0; i < 3; i++) {
             TextMessage textMessage = session.createTextMessage("topic-message:" + i);
             producer.send(textMessage);

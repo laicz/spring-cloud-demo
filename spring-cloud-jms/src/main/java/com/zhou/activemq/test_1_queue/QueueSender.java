@@ -2,7 +2,7 @@
  * Date:     2018/10/710:37
  * AUTHOR:   Administrator
  */
-package com.zhou.activemq.test_1;
+package com.zhou.activemq.test_1_queue;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
