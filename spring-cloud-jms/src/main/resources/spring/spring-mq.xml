@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/jms
+        http://www.springframework.org/schema/jms/spring-jms-4.0.xsd ">
+
+    <!-- 创建activemq 的连接工厂-->
+    <bean id="amqConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="${zhou.activemq.url}"/>
+        <property name="userName" value="${zhou.activemq.username}"/>
+        <property name="password" value="${zhou.activemq.password}"/>
+    </bean>
+
+
+    <!-- -->
+    <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+        <constructor-arg ref="amqConnectionFactory"/>
+        <property name="sessionCacheSize" value="100"/>
+    </bean>
+
+    <!--队列模式-->
+    <bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory"/>
+        <property name="pubSubDomain" value="false"/>
+    </bean>
+
+    <!--发布订阅模式-->
+    <bean id="jmsTopicTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory"/>
+        <!--持久模式  防止丢失-->
+        <property name="deliveryMode" value="2"/>
+        <property name="pubSubDomain" value="true"/>
+    </bean>
+
+    <bean id="durableTopicTest" class="com.zhou.activemq.consumer.DurableTopicConsumer"></bean>
+
+    <jms:listener-container destination-type="queue" container-type="default" connection-factory="connectionFactory"
+                            acknowledge="auto">
+
+    </jms:listener-container>
+
+    <jms:listener-container destination-type="topic" container-type="default" connection-factory="connectionFactory"
+                            acknowledge="auto">
+
+    </jms:listener-container>
+
+    <jms:listener-container destination-type="durableTopic" container-type="default"
+                            connection-factory="connectionFactory" acknowledge="auto">
+        <jms:listener destination="durable-topic-test" ref="durableTopicTest"/>
+    </jms:listener-container>
+
+</beans>
