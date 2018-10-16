@@ -31,6 +31,7 @@ public class QueueSender {
         for (int i = 0; i < 3; i++) {
             //创建需要发送的消息
             TextMessage textMessage = session.createTextMessage("message--" + i);
+
             //将消息写入临时队列中
 //            textMessage.setJMSReplyTo(temporaryQueue);
 //            QueueBrowser browser = session.createBrowser((Queue) destination);

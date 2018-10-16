@@ -2,7 +2,7 @@
  * Date:     2018/10/1022:33
  * AUTHOR:   Administrator
  */
-package com.zhou.activemq.test_3_persistent_topic.test_2;
+package com.zhou.activemq.test_3_persistent_topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
