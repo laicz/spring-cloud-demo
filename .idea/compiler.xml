@@ -21,6 +21,7 @@
         <module name="spring-cloud-jms" />
         <module name="spring-cloud-ribbon-consumer" />
         <module name="spring-data" />
+        <module name="spring-design-mode" />
         <module name="spring-zookeeper" />
       </profile>
     </annotationProcessing>
@@ -59,6 +60,7 @@
       <module name="spring-core_main" target="1.8" />
       <module name="spring-core_test" target="1.8" />
       <module name="spring-data" target="1.8" />
+      <module name="spring-design-mode" target="1.8" />
       <module name="spring-expression_main" target="1.8" />
       <module name="spring-expression_test" target="1.8" />
       <module name="spring-framework-bom_main" target="1.8" />
@@ -89,7 +91,7 @@
       <module name="spring-webmvc_test" target="1.8" />
       <module name="spring-websocket_main" target="1.8" />
       <module name="spring-websocket_test" target="1.8" />
-      <module name="spring-zookeeper" target="8" />
+      <module name="spring-zookeeper" target="1.7" />
       <module name="spring_main" target="1.8" />
       <module name="spring_test" target="1.8" />
     </bytecodeTargetLevel>

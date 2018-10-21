@@ -44,6 +44,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-core/spring-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-core/spring-core_main.iml" group="spring-core" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-core/spring-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-core/spring-core_test.iml" group="spring-core" />
       <module fileurl="file://$PROJECT_DIR$/spring-data/spring-data.iml" filepath="$PROJECT_DIR$/spring-data/spring-data.iml" group="spring" />
+      <module fileurl="file://$PROJECT_DIR$/springdesignmode/spring-design-mode.iml" filepath="$PROJECT_DIR$/springdesignmode/spring-design-mode.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression.iml" group="spring-expression" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_main.iml" group="spring-expression" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_test.iml" group="spring-expression" />
