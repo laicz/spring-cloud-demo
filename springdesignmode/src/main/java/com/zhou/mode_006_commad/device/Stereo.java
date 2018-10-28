@@ -2,7 +2,7 @@
  * Date:     2018/10/2521:32
  * AUTHOR:   Administrator
  */
-package com.zhou.mode_006_commad_mode.device;
+package com.zhou.mode_006_commad.device;
 
 /**
  * 命令模式-设备-音响

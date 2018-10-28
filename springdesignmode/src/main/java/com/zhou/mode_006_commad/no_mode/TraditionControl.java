@@ -2,11 +2,11 @@
  * Date:     2018/10/2521:52
  * AUTHOR:   Administrator
  */
-package com.zhou.mode_006_commad_mode.no_mode;
+package com.zhou.mode_006_commad.no_mode;
 
-import com.zhou.mode_006_commad_mode.control.Control;
-import com.zhou.mode_006_commad_mode.device.Light;
-import com.zhou.mode_006_commad_mode.device.Stereo;
+import com.zhou.mode_006_commad.control.Control;
+import com.zhou.mode_006_commad.device.Light;
+import com.zhou.mode_006_commad.device.Stereo;
 
 /**
  * 具体控制类

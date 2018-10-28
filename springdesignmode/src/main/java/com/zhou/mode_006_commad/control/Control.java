@@ -2,7 +2,7 @@
  * Date:     2018/10/2521:50
  * AUTHOR:   Administrator
  */
-package com.zhou.mode_006_commad_mode.control;
+package com.zhou.mode_006_commad.control;
 
 /**
  * 遥控器

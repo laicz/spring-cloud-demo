@@ -2,7 +2,7 @@
  * Date:     2018/10/2522:28
  * AUTHOR:   Administrator
  */
-package com.zhou.mode_006_commad_mode.command_code;
+package com.zhou.mode_006_commad.command_code;
 
 /**
  * 将命令抽象成一个接口（抽象类也行）

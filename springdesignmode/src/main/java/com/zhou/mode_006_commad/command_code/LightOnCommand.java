@@ -2,9 +2,9 @@
  * Date:     2018/10/2522:30
  * AUTHOR:   Administrator
  */
-package com.zhou.mode_006_commad_mode.command_code;
+package com.zhou.mode_006_commad.command_code;
 
-import com.zhou.mode_006_commad_mode.device.Light;
+import com.zhou.mode_006_commad.device.Light;
 
 /**
  * 具体的命令
