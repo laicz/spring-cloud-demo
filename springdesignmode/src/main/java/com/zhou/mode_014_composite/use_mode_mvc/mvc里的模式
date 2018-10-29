@@ -1,0 +1,12 @@
+MVC：Model、View、Controller
+MVC解决什么类型的项目需求：
+    解决由用户输入，经过处理后返回数据回去的模式
+
+    能够降低系统的复杂度和耦合度
+
+    model：是程序主体，代表业务数据和业务逻辑
+    view：是与用户交互的界面，显示数据，接收输入，但不参与实践业务逻辑
+
+    Model与View和Controller是观察者模式
+    View是以组件模式管理控件
+    View与Controller是策略模式关系，Controller提供策略
