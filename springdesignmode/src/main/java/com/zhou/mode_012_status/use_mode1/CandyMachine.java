@@ -22,7 +22,7 @@ public class CandyMachine {
         this.count = count;
 
         this.soldOutState = new SoldOutState();
-        this.onReadyState = new OnReadyState();
+        this.onReadyState = new OnReadyState(null);
         this.hasCoin = new HasCoinState();
         this.soldState = new SoldState();
         this.winnerState = new WinnerState();
