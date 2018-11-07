@@ -3,6 +3,7 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structures-and-algorithms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growth-network" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/growth-serializable" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/guava-programming" charset="UTF-8" />
@@ -14,6 +15,7 @@
     <file url="file://$PROJECT_DIR$/spring-cloud-jms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-ribbon-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-distribution" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-zookeeper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springdesignmode" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../springcloudinaction" charset="UTF-8" />

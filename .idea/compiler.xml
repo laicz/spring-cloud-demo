@@ -9,6 +9,7 @@
         <module name="api-gateway" />
         <module name="cloud-common" />
         <module name="config-server" />
+        <module name="data-structures-and-algorithms" />
         <module name="growth-network" />
         <module name="growth-serializable" />
         <module name="guava-programming" />
@@ -22,6 +23,7 @@
         <module name="spring-cloud-ribbon-consumer" />
         <module name="spring-data" />
         <module name="spring-design-mode" />
+        <module name="spring-distribution" />
         <module name="spring-zookeeper" />
       </profile>
     </annotationProcessing>
@@ -29,6 +31,7 @@
       <module name="api-gateway" target="1.8" />
       <module name="cloud-common" target="1.5" />
       <module name="config-server" target="1.8" />
+      <module name="data-structures-and-algorithms" target="1.7" />
       <module name="eureka" target="1.5" />
       <module name="growth-network" target="1.7" />
       <module name="growth-serializable" target="1.8" />
@@ -61,6 +64,7 @@
       <module name="spring-core_test" target="1.8" />
       <module name="spring-data" target="1.8" />
       <module name="spring-design-mode" target="1.8" />
+      <module name="spring-distribution" target="1.8" />
       <module name="spring-expression_main" target="1.8" />
       <module name="spring-expression_test" target="1.8" />
       <module name="spring-framework-bom_main" target="1.8" />

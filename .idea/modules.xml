@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-common/cloud-common.iml" filepath="$PROJECT_DIR$/cloud-common/cloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-structures-and-algorithms/data-structures-and-algorithms.iml" filepath="$PROJECT_DIR$/data-structures-and-algorithms/data-structures-and-algorithms.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/growth-network/growth-network.iml" filepath="$PROJECT_DIR$/growth-network/growth-network.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/growth-serializable/growth-serializable.iml" filepath="$PROJECT_DIR$/growth-serializable/growth-serializable.iml" group="spring" />
       <module fileurl="file://$PROJECT_DIR$/guava-programming/guava-programming.iml" filepath="$PROJECT_DIR$/guava-programming/guava-programming.iml" group="spring-jms" />
@@ -45,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-core/spring-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-core/spring-core_test.iml" group="spring-core" />
       <module fileurl="file://$PROJECT_DIR$/spring-data/spring-data.iml" filepath="$PROJECT_DIR$/spring-data/spring-data.iml" group="spring" />
       <module fileurl="file://$PROJECT_DIR$/springdesignmode/spring-design-mode.iml" filepath="$PROJECT_DIR$/springdesignmode/spring-design-mode.iml" group="spring-jms" />
+      <module fileurl="file://$PROJECT_DIR$/spring-distribution/spring-distribution.iml" filepath="$PROJECT_DIR$/spring-distribution/spring-distribution.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression.iml" group="spring-expression" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_main.iml" group="spring-expression" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-expression/spring-expression_test.iml" group="spring-expression" />
