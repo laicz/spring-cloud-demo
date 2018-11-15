@@ -1,0 +1,9 @@
+final finally finalize的用法
+
+final:修饰类时该类不能被继承
+       修饰方式则方法不能被重写
+       修饰变量时则变量不能更改
+
+finally:用在try语句中，一般用于资源的释放
+
+finalize：对资源进行标注，便于GC回收
