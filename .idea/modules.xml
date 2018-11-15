@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-aspects/spring-aspects.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-aspects/spring-aspects.iml" group="spring-aspects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-aspects/spring-aspects_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-aspects/spring-aspects_main.iml" group="spring-aspects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-aspects/spring-aspects_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-aspects/spring-aspects_test.iml" group="spring-aspects" />
+      <module fileurl="file://$PROJECT_DIR$/spring-base/spring-base.iml" filepath="$PROJECT_DIR$/spring-base/spring-base.iml" group="spring-jms" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-beans/spring-beans.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-beans/spring-beans.iml" group="spring-beans" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-beans/spring-beans_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-beans/spring-beans_main.iml" group="spring-beans" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-beans/spring-beans_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-beans/spring-beans_test.iml" group="spring-beans" />

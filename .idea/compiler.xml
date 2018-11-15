@@ -14,6 +14,7 @@
         <module name="growth-serializable" />
         <module name="guava-programming" />
         <module name="licensing-service" />
+        <module name="spring-base" />
         <module name="spring-boot-int" />
         <module name="spring-cloud-eureka-provider-hello" />
         <module name="spring-cloud-eureka-server" />
@@ -41,6 +42,7 @@
       <module name="spring-aop_test" target="1.8" />
       <module name="spring-aspects_main" target="1.8" />
       <module name="spring-aspects_test" target="1.8" />
+      <module name="spring-base" target="1.5" />
       <module name="spring-beans_main" target="1.8" />
       <module name="spring-beans_test" target="1.8" />
       <module name="spring-boot-int" target="1.8" />
