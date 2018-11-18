@@ -42,7 +42,7 @@
       <module name="spring-aop_test" target="1.8" />
       <module name="spring-aspects_main" target="1.8" />
       <module name="spring-aspects_test" target="1.8" />
-      <module name="spring-base" target="1.7" />
+      <module name="spring-base" target="8" />
       <module name="spring-beans_main" target="1.8" />
       <module name="spring-beans_test" target="1.8" />
       <module name="spring-boot-int" target="1.8" />

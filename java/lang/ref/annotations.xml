@@ -1,0 +1,5 @@
+<root>
+    <item name='java.lang.ref.ReferenceQueue java.lang.ref.Reference&lt;? extends T&gt; remove()'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
